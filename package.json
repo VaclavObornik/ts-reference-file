@@ -1,6 +1,6 @@
 {
   "name": "grunt-ts-reference-file",
-  "description": "",
+  "description": ">",
   "version": "0.1.0",
   "homepage": "https://github.com/ufon/ts-reference-file",
   "author": {
@@ -26,18 +26,28 @@
   "scripts": {
     "test": "grunt test"
   },
+  "dependencies": {
+    "underscore": "*",
+    "underscore.string": "*"
+  },
   "devDependencies": {
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-clean": "~0.4.0",
     "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt": "~0.4.1",
-    "underscore": "*",
-    "underscore.string": "*"
+    "grunt": "~0.4.1"
   },
   "peerDependencies": {
     "grunt": "~0.4.1"
   },
   "keywords": [
     "gruntplugin"
-  ]
+  ],
+  "readme": "# grunt-ts-reference-file\r\n\r\n> \r\n\r\n## Getting Started\r\nThis plugin requires Grunt `~0.4.1`\r\n\r\nIf you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:\r\n\r\n```shell\r\nnpm install grunt-ts-reference-file --save-dev\r\n```\r\n\r\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\r\n\r\n```js\r\ngrunt.loadNpmTasks('grunt-ts-reference-file');\r\n```\r\n",
+  "readmeFilename": "README.md",
+  "_id": "grunt-ts-reference-file@0.1.0",
+  "dist": {
+    "shasum": "742c16669761366795e11834c065e4d1116e61f0"
+  },
+  "_resolved": "git://github.com/ufon/ts-reference-file.git#230061e31e3f5f11af62fc92f8eabc9bf2fa9ef5",
+  "_from": "grunt-ts-reference-file@git://github.com/ufon/ts-reference-file.git"
 }
