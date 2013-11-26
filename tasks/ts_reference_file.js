@@ -62,6 +62,9 @@ module.exports = function (grunt) {
 
 
     var files = grunt.file.expand(options.src);
+    if(options.exclude) {
+      files = _.difference(files, grunt.file.expand(options.exclude));
+    }
 
     // ignore directories
     files = files.filter(function (file) {
