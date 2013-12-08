@@ -163,6 +163,10 @@ module.exports = function (grunt) {
       var updatedFileLines = insertArrayAt(origFileLines, signatureSectionPosition, contents);
       fs.writeFileSync(referenceFile, updatedFileLines.join(eol));
 
+      if(typeof options.append == "function") {
+        fs.writeFileSync("\n" + options.append());
+      }
+
       // Return whether the file was changed
       if (lines.length == updatedFileLines.length) {
         var updated = false;
