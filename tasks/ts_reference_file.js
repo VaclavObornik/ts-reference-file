@@ -164,7 +164,7 @@ module.exports = function (grunt) {
       fs.writeFileSync(referenceFile, updatedFileLines.join(eol));
 
       if(typeof options.append == "function") {
-        fs.writeFileSync("\n" + options.append());
+        fs.writeFileSync(referenceFile, eol + options.append());
       }
 
       // Return whether the file was changed
