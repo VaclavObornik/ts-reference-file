@@ -42,7 +42,7 @@ module.exports = function (grunt) {
     return path;
   }
 
-  grunt.registerTask('tsReferenceFile', '', function () {
+  grunt.registerMultiTask('tsReferenceFile', '', function () {
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options();
 
