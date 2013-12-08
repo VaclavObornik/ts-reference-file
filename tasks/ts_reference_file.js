@@ -159,13 +159,16 @@ module.exports = function (grunt) {
       });
       contents.push(ourSignatureEnd);
 
+      var append = "";
+      if(typeof options.append == "function") {
+        append = eol + options.append();
+      }
+
       // Modify the orig contents to put in our contents
       var updatedFileLines = insertArrayAt(origFileLines, signatureSectionPosition, contents);
-      fs.writeFileSync(referenceFile, updatedFileLines.join(eol));
+      fs.writeFileSync(referenceFile, updatedFileLines.join(eol) + append);
 
-      if(typeof options.append == "function") {
-        fs.writeFileSync(referenceFile, eol + options.append());
-      }
+
 
       // Return whether the file was changed
       if (lines.length == updatedFileLines.length) {
