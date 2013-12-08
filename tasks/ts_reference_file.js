@@ -157,12 +157,13 @@ module.exports = function (grunt) {
         // Finally add the filepath
         contents.push(referenceIntro + filepath + referenceEnd);
       });
+
+      if(typeof options.append == "function") {
+        contents.push(options.append());
+      }
+
       contents.push(ourSignatureEnd);
 
-      var append = "";
-      if(typeof options.append == "function") {
-        append = eol + options.append();
-      }
 
       // Modify the orig contents to put in our contents
       var updatedFileLines = insertArrayAt(origFileLines, signatureSectionPosition, contents);
