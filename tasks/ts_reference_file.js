@@ -167,7 +167,7 @@ module.exports = function (grunt) {
 
       // Modify the orig contents to put in our contents
       var updatedFileLines = insertArrayAt(origFileLines, signatureSectionPosition, contents);
-      fs.writeFileSync(referenceFile, updatedFileLines.join(eol) + append);
+      fs.writeFileSync(referenceFile, updatedFileLines.join(eol));
 
 
 
